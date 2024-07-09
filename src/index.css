@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+}
+:root {
+  font-family: poppins;
+  line-height: 1.5;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+#border-red {
+  border: 1px solid red;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
