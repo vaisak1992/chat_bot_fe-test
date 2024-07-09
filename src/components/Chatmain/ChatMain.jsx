@@ -34,7 +34,7 @@ export default function ChatMain() {
           console.error("There was an error!", error);
           const pay = {
             question: state.input_box,
-            answer:  "No answer found",
+            answer: "No answer found",
           };
           dispatch({ type: ACTIONS.SEND_MSG, payload: pay });
           dispatch({ type: ACTIONS.ANSWER, payload: "Answer" });
@@ -57,9 +57,11 @@ export default function ChatMain() {
                 }}
                 key={`msg_${index}`}
               >
-                <div style={{ border: "1p xsolid red" }}>
-                  <span className={styles.msg_bubble}>{val.question}</span>
-                </div>
+                {val.question && (
+                  <div style={{ border: "1p xsolid red" }}>
+                    <span className={styles.msg_bubble}>{val.question}</span>
+                  </div>
+                )}
                 <div
                   style={{
                     display: "flex",
