@@ -4,8 +4,8 @@ pipeline {
     environment {
         FRONTEND_REPO = 'https://github.com/vaisak1992/chat_bot_fe-test.git'
         BACKEND_REPO = 'https://github.com/vaisak1992/chat_bot_be-test.git'
-	      DEST_DIR = '/home/ubuntu/demo/frontend'
-	    S SH_CREDENTIALS_ID = '8a0d5a1f-8c38-45e3-b496-cc1f456655a3'
+	DEST_DIR = '/home/ubuntu/demo/frontend'
+	SSH_CREDENTIALS_ID = '8a0d5a1f-8c38-45e3-b496-cc1f456655a3'
         S3_BUCKET = 'test-fe-chat-bot-1'	
         EC2_USER = 'ubuntu'		     	
         EC2_HOST = '13.60.88.142'		
