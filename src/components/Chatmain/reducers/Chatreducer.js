@@ -1,6 +1,6 @@
 export const INITIAL_STATE = {
   input_box: "",
-  msg: [{answer:"Hello! How can I assist you today?"}],
+  msg: [{answer:"Hello! How may I assist you today?"}],
   answer: [],
 };
 
