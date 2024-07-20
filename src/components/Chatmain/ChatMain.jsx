@@ -21,7 +21,7 @@ export default function ChatMain() {
   const handleSend = (e) => {
     if (e.keyCode === 13 || e.type === "click") {
       axios
-        .post("http://localhost:3000/query", { question: state.input_box })
+        .post("http://16.171.136.200:3000/query", { question: state.input_box })
         .then((res) => {
           const pay = {
             question: state.input_box,
