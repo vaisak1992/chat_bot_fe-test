@@ -47,7 +47,7 @@ jobs:
       run: |
         echo "${SSH_PRIVATE_KEY}" > private_key.pem
         chmod 600 private_key.pem
-        scp -r -i private_key.pem ./* ubuntu@16.171.136.200:/home/ubuntu/action_test
+        scp -o StrictHostKeyChecking=no -r -i private_key.pem ./* ubuntu@16.171.136.200:/home/ubuntu/action_test
         
     - name: Cleanup SSH key
       run: rm private_key.pem
