@@ -34,4 +34,4 @@ jobs:
         aws-region: eu-north-1 # Specify your AWS region
 
     - name: Sync build files to S3
-      run: aws s3 sync build/ s3://chat-bot-007 --delete
+      run: aws s3 sync dist/ s3://chat-bot-007 --delete
