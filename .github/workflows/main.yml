@@ -35,3 +35,19 @@ jobs:
 
     - name: Sync build files to S3
       run: aws s3 sync dist/ s3://chat-bot-007 --delete
+      
+    - name: Checkout backend repository
+      uses: actions/checkout@v3
+      with:
+        repository: 'vaisak1992/chat_bot_be-test' # Backend repo
+
+    - name: Copy backend files to EC2
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+      run: |
+        echo "${SSH_PRIVATE_KEY}" > private_key.pem
+        chmod 600 private_key.pem
+        scp -r -i private_key.pem ./* ubuntu@16.171.136.200:/home/ubuntu/action_test
+        
+    - name: Cleanup SSH key
+      run: rm private_key.pem
